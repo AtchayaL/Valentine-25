@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Valentines Day 2024</title>
+        <link rel="stylesheet" href="vday.css">
+        <style>
+            /* Style for the "Click Here" button (top-right corner) */
+            .top-right-button {
+                position: fixed; /* Fixed position to keep it in place */
+                top: 20px; /* Distance from the top */
+                right: 20px; /* Distance from the right */
+                padding: 10px 20px; /* Padding inside the button */
+                background-color: #ff4081; /* Pink background color */
+                color: white; /* White text color */
+                border: none; /* Remove border */
+                border-radius: 5px; /* Rounded corners */
+                cursor: pointer; /* Pointer cursor on hover */
+                font-size: 16px; /* Font size */
+                text-decoration: none; /* Remove underline */
+                font-family: 'Courier New', Courier, monospace; /* Love letter font */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            }
+            .top-right-button:hover {
+                background-color: #e91e63; /* Darker pink on hover */
+            }
+
+            /* Style for the "Read Me" button (center bottom) */
+            .read-me-button {
+                position: absolute; /* Position relative to the card */
+                bottom: 20px; /* Distance from the bottom */
+                left: 50%; /* Center horizontally */
+                transform: translateX(-50%); /* Adjust for exact centering */
+                padding: 10px 20px; /* Padding inside the button */
+                background-color: #ff4081; /* Pink background color */
+                color: white; /* White text color */
+                border: none; /* Remove border */
+                border-radius: 5px; /* Rounded corners */
+                cursor: pointer; /* Pointer cursor on hover */
+                font-size: 16px; /* Font size */
+                font-family: 'Courier New', Courier, monospace; /* Love letter font */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+                text-transform: uppercase; /* Uppercase text */
+            }
+            .read-me-button:hover {
+                background-color: #e91e63; /* Darker pink on hover */
+            }
+
+            /* Style for the modal (pink box) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                top: 50%; /* Center vertically */
+                left: 50%; /* Center horizontally */
+                transform: translate(-50%, -50%); /* Adjust for exact centering */
+                width: 600px; /* Width of the modal */
+                max-height: 80vh; /* Maximum height (80% of viewport height) */
+                padding: 20px; /* Padding inside the modal */
+                background-color: #ffebee; /* Light pink background */
+                border: 2px solid #ff4081; /* Pink border */
+                border-radius: 10px; /* Rounded corners */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow */
+                z-index: 1000; /* Ensure it's on top */
+                overflow-y: auto; /* Enable vertical scrolling if content overflows */
+            }
+
+            /* Style for the text inside the modal */
+            .modal-content {
+                font-family: 'Courier New', Courier, monospace; /* Love letter font */
+                font-size: 16px; /* Font size */
+                line-height: 1.6; /* Line height for better readability */
+                color: #333; /* Dark gray text color */
+            }
+
+            /* Style for the timeline dates */
+            .timeline-date {
+                font-weight: bold; /* Bold text for dates */
+                color: #ff4081; /* Pink color for dates */
+                margin-top: 20px; /* Space above each date */
+            }
+
+            /* Style for hearts */
+            .heart {
+                color: #ff4081; /* Pink hearts */
+                font-size: 20px; /* Size of hearts */
+                margin: 0 5px; /* Space around hearts */
+            }
+
+            /* Style for the close button */
+            .close-button {
+                display: block; /* Block-level element */
+                margin-top: 20px; /* Space above the button */
+                padding: 10px 20px; /* Padding inside the button */
+                background-color: #ff4081; /* Pink background */
+                color: white; /* White text */
+                border: none; /* Remove border */
+                border-radius: 5px; /* Rounded corners */
+                cursor: pointer; /* Pointer cursor on hover */
+                font-size: 16px; /* Font size */
+                text-align: center; /* Center text */
+            }
+            .close-button:hover {
+                background-color: #e91e63; /* Darker pink on hover */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- "Click Here" button in the top-right corner -->
+        <a href="../main_folder/index.html" class="top-right-button">Click Here</a>
+
+        <div class="valentines_card">
+            <div class="front_card">
+                <img src="vday.png" class="front_img">
+                <div class="front_text">
+                    <h3>Sending you a special delivery of love mail...</h3>
+                </div>    
+            </div>
+            <div class="inside_card">
+                <img src="inside.png" class="inside_img">
+                <div>
+                    <audio controls>
+                        <source src="MadeForMe.mp3" type="audio/mp3">
+                    </audio>  
+                </div>
+                <div class="inside_text">
+                    <h4>...straight from my heart of someone who adores you more than words can say.</h4>
+                    <h3>Happy Valentine's day to my everything mwaah mwaah my baby bear</h3>
+                </div>
+                <!-- "Read Me" button in the center bottom -->
+                <button class="read-me-button" onclick="openModal()">Read Me</button>
+            </div>
+        </div>
+
+        <!-- Modal (pink box) -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <p>
+                    <span class="heart">❤️</span> Helloo my baby bear, <span class="heart">❤️</span><br><br>
+                    I love you the most, you are the best that has ever happened to me, you make my life better, I love you soo much my buju kutty. I actually wrote everything in a pdf and named it mango, so here is the story about uss:<br><br>
+                    <span class="heart">❤️</span> btww I wrote this three months back <span class="heart">❤️</span>
+                </p>
+
+                <!-- Timeline -->
+                <div class="timeline-date">17th April 2023</div>
+                <p>
+                    It was lunch break, I first met you in that pathway, waiting for me, “anything atchaya wants” made me fall for you more and that’s how it all started..<br>
+                    You wore blue, I wore brown top, I met you for the first time, I found you really attractive, cute and handsome, you complimented my skin and I blushed.<br>
+                    We texted and texted, we got to know each other, I never texted anyone that much but I waited for a text from a person I met for the first time on a Monday..
+                </p>
+
+                <div class="timeline-date">25th April 2023 - the day I fell for you</div>
+                <p>
+                    It was free hour for me but you bunked. It was a rainy day when it's supposed to be sunny on summer.<br>
+                    We walked all the way to main canteen. “You know the weather is nice..maybe we could go for a long drive” The blush matched with my top colour..pink.<br>
+                    “Are you kidding me no mohamed” is what I said but I still followed you like a lost puppy.<br>
+                    We went to parking, you opened the door for me, “You know you are the first girl who got inside my car and that too sat on the front seat after my mom and sister” this is what you told me.<br>
+                    You always ask me when I fell for you right? I knew I was in love when I followed you to parking..
+                </p>
+
+                <!-- Add more timeline dates here... -->
+                <div class="timeline-date">The Drive</div>
+                <p>
+                    I was scared but excited..I felt like a kid,you talked and cracked jokes
+                    You told me I look like a tomato with really red cheeks,you looked at me instead of the road and
+                    I never asked where we are going
+                    You could say i fell already
+                   That evening yes after all the hints and weeks of flirting I said the first “I love you”.
+                    We started dating.
+                </p>
+
+                <div class="timeline-date"> The First Kiss- 8th May</div>
+                <p>
+                    First kiss to me will always be when we walked on the pathway , I was wearing a yellow top and
+ you wore pink shirt
+ You kissed me on the cheeks, like a cold breeze on an early morning walk
+ You took me on a drive and kissed me, i can't help but pull you in for another kiss
+ I trusted you with my everything,I was blindly in love with you
+ You kissed me on the cheeks inside the car while we were both in uniform..it felt cute..u waited
+ for my auto to come..on a heavy rainy day in front of main canteen
+                </p>
+                <div class="timeline-date"> 5th July, your birthday</div>
+                <p>
+                    We celebrated your bd on 4th July,You laughed like a kid looking at my gifts
+ We were obsessed with mogu mogu and brownies by that time,and toothless
+ Lychee was my fav and mango was yours
+ You hated carrots,I love it
+ I don't know anything about cars but I listened
+ You were my toothless so i gifted you that drawing and told you when I get pregnant apom
+ unnoda birthday ku I will draw baby toothless..save this drawing,keep it carefully nu sonen
+ Idk if you have that now
+ I was more excited for you birthday,you celebrated your 19th birthday with me
+                </p>
+                <div class="timeline-date">The movie date- Leo</div>
+                <p>
+                    Such a cute movie date with you , my mom trusted you but we had a fight on your way back and
+                    I cried but when I came back to you, your arms were open
+                </p>
+                <div class="timeline-date">29th April,2023</div>
+                <p>
+                    This day is when we had a cute library date and took our first pic
+ It rained that evening and you held my arm cuz I was scared of thunder,in front of that
+ mechanical block,I still have this pic
+                </p>
+                <div class="timeline-date">Hospital</div>
+                <p>
+                    The day before I wore your t shirt,it was white one idk if u have it with you anymore,next day
+ you gave me monchie(teddy) like you and dino(the green) one , it made me cry cuz i loved it so
+ much
+ I was so sick ,you took me to the hospital,waited 2 hrs for me,dropped me and amma home
+ We both wore yellow that day and i was so sick but you made me feel better
+                </p>
+                <div class="timeline-date">New year 2024</div>
+                <p>
+                    I started the year with you
+ It was all nice,felt like I was the happiest
+                </p>
+                <div class="timeline-date"> 27th March 2024(unforgettable day)</div>
+                <p>
+                    My birthday
+                    You took me to a home,told me we are their family,we served food to them,I was in tears..That
+                    was the best birthday ever
+                    You gave me pinkie that day and after that I never went to bed without it
+                    What else happened is in my heart
+
+                </p>
+                <div class="timeline-date"> 5th July 2024,the day I always wait for</div>
+                <p>
+                    I was able to celebrate your 20th birthday with you..
+                    I made you briyani and you loved it so much
+                    Well sadly you weren't all dressed up cuz we had lab
+                    You loved my gifts,my letters
+                   
+                </p>
+                <p>
+                    <span class="heart">❤️</span> This is our kutty and beautiful story.. now it will be here in this cute website I made "forever". I will keep on repeating this again and again my love for you is just keeps on growing every day papa.<br>
+                    I love you the most.<br>
+                    22 MARCH 2023……
+                    If I could go back in time..yes I would still choose you mwah.Happy Valentine's Day to my everything. <span class="heart">❤️</span>
+                </p>
+
+            </div>
+            <button class="close-button" onclick="closeModal()">Close</button>
+        </div>
+
+        <script>
+            // Function to open the modal
+            function openModal() {
+                document.getElementById("myModal").style.display = "block";
+            }
+
+            // Function to close the modal
+            function closeModal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+        </script>
+    </body>
+</html>
