@@ -41,7 +41,7 @@
     },
     {
       "src": "/",
-      "dest": "/Val_Card/index.html"  // Make sure index.html is the landing page
+      "dest": "/Val_Card/index.html"  
     }
   ]
 }
