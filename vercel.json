@@ -1,16 +1,19 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "Val_Card/index.html",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/Val_Card/index.html"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "Val_Card/index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/main_folder/(.*)",
+      "dest": "/main_folder/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/Val_Card/index.html"
+    }
+  ]
+}
