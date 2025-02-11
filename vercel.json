@@ -21,7 +21,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/Val_Card/index.html"  // All requests go to index.html
+      "dest": "/Val_Card/index.html"  
     }
   ]
 }
