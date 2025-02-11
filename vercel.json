@@ -4,6 +4,10 @@
     {
       "src": "Val_Card/index.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "main_folder/abc.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
