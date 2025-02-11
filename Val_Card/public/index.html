@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day 2024</title>
+    <link rel="stylesheet" href="vday.css">
+    <style>
+        /* Style for the "Click Here" button (top-right corner) */
+        .top-right-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .top-right-button:hover {
+            background-color: #e91e63;
+        }
+
+        /* "Read Me" button (center bottom) */
+        .read-me-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+        }
+        .read-me-button:hover {
+            background-color: #e91e63;
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            max-height: 80vh;
+            padding: 20px;
+            background-color: #ffebee;
+            border: 2px solid #ff4081;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        .modal-content {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .timeline-date {
+            font-weight: bold;
+            color: #ff4081;
+            margin-top: 20px;
+        }
+        .heart {
+            color: #ff4081;
+            font-size: 20px;
+            margin: 0 5px;
+        }
+        .close-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+        .close-button:hover {
+            background-color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- "Click Here" button -->
+    <a href="/main_folder/abc.html" class="top-right-button">Click Here</a>
+
+    <!-- Background Music -->
+    <audio id="bg-music" src="./MadeForMe.mp3" loop></audio>
+
+    <!-- Valentine's Card -->
+    <div class="valentines_card">
+        <div class="front_card">
+            <img src="vday.png" class="front_img">
+            <div class="front_text">
+                <h3>Sending you a special delivery of love mail...</h3>
+            </div>    
+        </div>
+
+        <div class="inside_card">
+            <img src="inside.png" class="inside_img">
+            <div>
+                <audio controls>
+                    <source src="MadeForMe.mp3" type="audio/mp3">
+                </audio>  
+            </div>
+            <div class="inside_text">
+                <h4>...straight from my heart of someone who adores you more than words can say.</h4>
+                <h3>Happy Valentine's day to my everything mwaah mwaah my baby bear</h3>
+            </div>
+
+            <!-- "Read Me" button -->
+            <button class="read-me-button" onclick="openModal()">Read Me</button>
+        </div>
+    </div>
+
+    <!-- Modal (pink box) -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p>
+                <span class="heart">❤️</span> Helloo my baby bear, <span class="heart">❤️</span><br><br>
+                I love you the most, you are the best that has ever happened to me, you make my life better, I love you soo much my buju kutty...
+            </p>
+
+            <div class="timeline-date">17th April 2023</div>
+            <p>It was lunch break, I first met you in that pathway, waiting for me...</p>
+
+            <div class="timeline-date">25th April 2023 - the day I fell for you</div>
+            <p>It was free hour for me but you bunked. It was a rainy day...</p>
+
+            <div class="timeline-date">The Drive</div>
+            <p>I was scared but excited..I felt like a kid, you talked and cracked jokes...</p>
+
+            <div class="timeline-date">The First Kiss - 8th May</div>
+            <p>First kiss to me will always be when we walked on the pathway...</p>
+
+            <div class="timeline-date">5th July, your birthday</div>
+            <p>We celebrated your bd on 4th July, you laughed like a kid...</p>
+
+            <div class="timeline-date">The movie date - Leo</div>
+            <p>Such a cute movie date with you, my mom trusted you...</p>
+
+            <div class="timeline-date">29th April 2023</div>
+            <p>This day is when we had a cute library date and took our first pic...</p>
+
+            <div class="timeline-date">Hospital</div>
+            <p>The day before I wore your t-shirt, it was white one...</p>
+
+            <!-- Close Button -->
+            <button class="close-button" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
