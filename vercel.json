@@ -6,7 +6,27 @@
       "use": "@vercel/static"
     },
     {
-      "src": "main_folder/abc.html",
+      "src": "main_folder/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "main_folder/*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "main_folder/*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Val_Card/*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Val_Card/*.png",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Val_Card/*.mp3",
       "use": "@vercel/static"
     }
   ],
@@ -14,6 +34,10 @@
     {
       "src": "/main_folder/(.*)",
       "dest": "/main_folder/$1"
+    },
+    {
+      "src": "/Val_Card/(.*)",
+      "dest": "/Val_Card/$1"
     },
     {
       "src": "/(.*)",
