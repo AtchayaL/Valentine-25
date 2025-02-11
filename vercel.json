@@ -40,8 +40,8 @@
       "dest": "/Val_Card/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "/Val_Card/index.html"
+      "src": "/",
+      "dest": "/Val_Card/index.html"  // Make sure index.html is the landing page
     }
   ]
 }
